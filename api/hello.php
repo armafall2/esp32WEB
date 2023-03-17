@@ -1,4 +1,4 @@
-<?php 
-echo "le php fonctionne"
-
+<?php
+header('Content-Type: text/plain');
+echo "Hello, World!";
 ?>
