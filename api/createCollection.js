@@ -18,6 +18,12 @@ async function createCollection() {
 }
 
 module.exports = async (req, res) => {
-    await createCollection();
-    res.status(200).send('Collection créée avec succès !');
-};
+    try {
+      await createCollection();
+      res.status(200).send('Collection créée avec succès !');
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Erreur lors de la création de la collection !');
+    }
+  };
+  
